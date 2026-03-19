@@ -1,4 +1,4 @@
-# Sora Register 管理后台
+# sora注册机qq群：1093370579
 
 一个面向本地部署的 Sora / ChatGPT 账号管理面板，包含协议注册调度、账号资源池管理、手机号绑定、Sora 视频生成和 API Key 池化调用能力。项目采用 `FastAPI + SQLite + 原生前端` 结构，默认通过 Web 控制台完成日常操作。
 
